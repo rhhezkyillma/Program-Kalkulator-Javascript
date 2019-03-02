@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <title> Java Script</title>
+
+    <script>
+
+        function inputt(num){
+            document.form.textview.value = document.form.textview.value +num
+        }
+
+        function hasil(){
+            var result= document.form.textview.value;
+            if(result){
+                document.form.textview.value = eval(result)
+            }
+        }
+
+        function clean(){
+            document.form.textview.value = "";
+        }
+
+        function cleanback(){
+            var result= document.form.textview.value;
+            document.form.textview.value = result.substring(0,result.length-1);
+
+        }
+		
+		
+
+    </script>
+
+    <style>
+        body{
+            background: linear-gradient(to right, #e91e63, #3f51b5);
+        }
+
+
+        .transparent{
+            background:rgba(2, 2, 2, 0.5);
+            padding:50px;
+            text-align: justify;
+            color:#fff;
+        }
+
+        .button{
+            width: 50px;
+            height:50px;
+            margin: 2px;
+            background-color:slategrey ;
+            color: white;
+            font-size: 25px;
+            font-family: sans-serif;
+            cursor: pointer;
+        }
+        .inputtext{
+            width: 218px;
+            height: 50px;
+            margin: 5px;
+            font-size: 25px;
+   
+        }
+
+        .copyright{
+            text-align:center;
+            padding:15px;
+            margin-top: 5px;
+            font-size:18px;
+            font-family:sans-serif;
+
+        }
+
+        .main{
+            position:absolute;
+            margin-top: 10px;
+            margin-left: 420px;
+        }
+		
+		.center {
+      
+      margin: 0 auto;
+      
+    }
+
+    .copyright {
+      
+      font-family: futura;
+      font-style: italic;
+      text-align: center;
+      color:#313131;
+      font-size:20px;
+      font-weight: bold;
+      -webkit-animation:colorchange 20s infinite alternate;
+      
+      
+    }
+
+    @-webkit-keyframes colorchange {
+      0% {
+        
+        color: black;
+      }
+      
+      10% {
+        
+        color: #8e44ad;
+      }
+      
+      20% {
+        
+        color: #1abc9c;
+      }
+      
+      30% {
+        
+        color: #d35400;
+      }
+      
+      40% {
+        
+        color: blue;
+      }
+      
+      50% {
+        
+        color: #34495e;
+      }
+      
+      60% {
+        
+        color: blue;
+      }
+      
+      70% {
+        
+        color: #2980b9;
+      }
+      80% {
+     
+        color: #f1c40f;
+      }
+      
+      90% {
+     
+        color: #2980b9;
+      }
+      
+      100% {
+        
+        color: pink;
+      }
+    }
+	
+	
+
+	    
+    </style>
+</head>
+<body>
+ 
+        
+    <div class="main" >
+		<h1 class="copyright" style= "font-size : 30px"}> My Calculator </h1>
+    <div class="transparent">
+    <form name="form">
+            <input class="inputtext" type="text" name="textview" >
+
+    </form>
+    <table >
+        <tr>
+            <td> <input class="button" type="button" value="C" onclick="clean()"></td>
+            <td> <input class="button" type="button" value="CE" onclick="cleanback()"></td>
+            <td> <input class="button" type="button" value="/" onclick ="inputt ('/')"> </td>
+            <td> <input class="button" type="button" value="*" onclick ="inputt ('*')"> </td>
+        </tr>
+        
+       <tr>
+            <td> <input class="button" type="button" value="7" onclick ="inputt (7)"> </td>
+            <td> <input class="button" type="button" value="8" onclick ="inputt (8)"> </td>
+            <td> <input class="button" type="button" value="9" onclick ="inputt (9)"> </td>
+            <td> <input class="button" type="button" value="-" onclick ="inputt ('-')"> </td>
+        </tr>
+       <tr>
+            <td> <input class="button" type="button" value="4" onclick ="inputt (4)"> </td>
+            <td> <input class="button" type="button" value="5" onclick ="inputt (5)"> </td>
+            <td> <input class="button" type="button" value="6" onclick ="inputt (6)"> </td>
+            <td> <input class="button" type="button" value="+" onclick ="inputt ('+')"> </td>
+        </tr>
+
+        <tr>
+            <td> <input class="button" type="button" name="satu" value="1" onclick ="inputt (1)"></td>
+            <td> <input class="button" type="button" value="2" onclick ="inputt (2)"></td>
+            <td> <input class="button" type="button" value="3" onclick ="inputt (3)"></td>
+            <td  rowspan="2"> <input class="button" type="button" value="=" style="height:107px" onclick="hasil()"></td>
+        </tr>
+
+         <tr>
+            <td colspan="2"> <input class="button" type="button" value="0" style="width:107px" onclick ="inputt (0)" ></td>
+            <td> <input class="button" type="button" value="." onclick ="inputt ('.')"></td>
+        </tr>
+        
+    </table>
+    </div>
+
+    <footer>     
+           
+            <div class='center'>
+			
+			<p class="copyright" >Copyright &copy; Reezky Illmawati</p"copyright"</p> 
+			
+			<div class="container" id="container">
+			  <figure class="bubble" style="--z-index: -200px;--left: 0px; --top: 0px"></figure>
+			  <figure class="bubble bubble--reverse" style="--z-index: 0px;--left: 0px;--top: 0px"></figure>
+			</div>
+			
+			</div>
+			
+			
+            
+    </footer>
+</div>
+</body>
+</html>
