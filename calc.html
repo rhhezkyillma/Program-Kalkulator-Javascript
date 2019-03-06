@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <title> Java Script</title>
+	<style>
+		body{
+            background: linear-gradient(to right, #e91e63, #3f51b5);
+			
+        }
+
+
+        .transparent{
+            background:rgba(2, 2, 2, 0.5);
+			height: 360px;
+			padding:50px 5px 5px 50px;
+			width:400px;
+            text-align: justify;
+            color:#fff;
+			margin:0px auto;
+        }
+		 .button{
+			align: center;
+            width: 59px;
+            height:50px;
+            background-color:white;
+			border: 1px solid black;
+            font-size: 25px;
+            font-family: sans-serif;
+            cursor: pointer;
+			display: inline-block;
+        }
+		
+		 .inputtext{
+            width: 242px;
+            height: 50px;
+            font-size: 25px;
+   
+        }
+		h1{
+			text-align:center;
+			color:white;
+			font-family: sans-serif;
+		}
+		text{
+			margin-left:100px;
+		}
+		.copyright {
+      
+		   font-family: futura;
+		   font-style: italic;
+		   text-align: center;
+		   color:#ffffff;
+		   font-size:20px;
+		   font-weight: bold;		  
+      
+    }
+				
+	</style>
+		
+	<script type="text/javascript">
+		function penjumlahan(){
+			var a=parseFloat(document.form.bil1.value)
+			var b=parseFloat(document.form.bil2.value)
+
+			var c=a+b
+			document.form.hasil.value=c
+		}
+		function pengurangan(){
+
+			var a=parseFloat(document.form.bil1.value)
+			var b=parseFloat(document.form.bil2.value)
+
+			var d=a-b
+			document.form.hasil.value=d
+		}
+		function perkalian(){
+
+			var a=parseFloat(document.form.bil1.value)
+			var b=parseFloat(document.form.bil2.value)
+
+			var e=a*b
+			document.form.hasil.value=e
+		}
+		function pembagian(){
+
+			var a=parseFloat(document.form.bil1.value)
+			var b=parseFloat(document.form.bil2.value)
+
+			var f=a/b
+			document.form.hasil.value=f
+		}
+		
+		function clean(){
+            document.form.bil1.value = "";
+			document.form.bil2.value = "";
+			document.form.hasil.value = "";
+        }
+
+        function cleanback(){
+            var bilangan1= document.form.bil1.value;
+            document.form.bil1.value = bilangan1.substring(0,bilangan1.length-1);
+			
+			var bilangan2= document.form.bil2.value;
+            document.form.bil2.value = bilangan2.substring(0,bilangan2.length-1);
+			
+			var result= document.form.hasil.value;
+            document.form.hasil.value = result.substring(0,result.length-1);
+
+        }
+		
+	</script>
+	
+</head>
+
+<body>
+	 <h1> My Calculator </h1>
+	 <div class="transparent">
+	 <form name="form">
+			<table align="left" >
+			<tr>
+				<td> Number_1 </td>
+				<td><input class="inputtext" type="text" name="bil1"></td>
+			
+			</tr>
+			
+			<tr>
+				<td> Number_2 </td>
+				<td> <input class="inputtext" type="text" name="bil2" > </td>
+			</tr>
+			
+			<tr>
+				<td> Result </td>
+				<td> <input class="inputtext" type="text" name="hasil" > </td>
+			</tr>
+         
+			</table>
+    </form>
+	
+	<table align="center" >
+		<tr>
+            <td colspan="2"> <input class="button" type="button" value="C" style="width:121px" onclick="clean()" ></td>
+			<td colspan="2"> <input class="button" type="button" value="CE" style="width:121px" onclick="cleanback()"></td>
+			
+        </tr>
+		
+		<tr>
+			<td> <input class="button" type="button" value="+" onclick ="penjumlahan()"> </td>
+            <td> <input class="button" type="button" value="-" onclick ="pengurangan()"> </td>
+			<td> <input class="button" type="button" value="*" onclick ="perkalian()"> </td>
+            <td> <input class="button" type="button" value="/" onclick ="pembagian()"> </td>
+		</tr>
+	</table>
+		<p class="copyright" >Copyright &copy; Reezky Illmawati</p"copyright"</p> 
+	</div>
+	
+			
+</body>
+
+</html>
